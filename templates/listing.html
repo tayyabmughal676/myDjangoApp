@@ -7,6 +7,8 @@
     <p class="text-gray-900"> ${{ listing.price }}</p>
     <p class="text-gray-600 text-sm"> {{ listing.address }}</p>
 
+
+    {% comment %} {% if requrest.user.is_staff %} {% endcomment %}
     <div class="mt-5 py-5 border-t border-gray-200 ">
         <a href="/listings/{{ listing.id}}/edit/" class="text-blue-500">
             Edit
@@ -15,6 +17,10 @@
             Delete
         </a>
     </div>
+
+    {% comment %} {% endif %} {% endcomment %}
+
+
 
 </div>
 

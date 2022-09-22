@@ -1,6 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
 
-<form method="post">
+<h2 class="text-4xl text-gray-900"> Create a Listing </h2>
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit"> Submit </button>
+    <button type="submit"> Create </button>
 </form>
+
+{% endblock content %}
