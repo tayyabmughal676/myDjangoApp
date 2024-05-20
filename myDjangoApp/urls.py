@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from listings.views import (
-    listing_list, 
-    listing_create, 
+    listing_list,
+    listing_create,
     listing_retrieve,
     listing_update,
     listing_delete
@@ -35,5 +35,5 @@ urlpatterns = [
     path("add-listing/", listing_create),
 ]
 
-if settings.DEBUG: 
-    urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
